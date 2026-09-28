@@ -1,0 +1,25 @@
+{
+    "_comment": "Dashboard diagnostic: 10 epochs, lr=1e-3, no contrastive loss. Fast feedback loop.",
+    "controlnet_train": {
+        "batch_size": 1,
+        "cache_rate": 0,
+        "fold": 0,
+        "lr": 1e-3,
+        "n_epochs": 10,
+        "weighted_loss_label": [],
+        "weighted_loss": 0,
+        "use_region_contrasive_loss": false,
+        "region_contrasive_loss_delta": 0,
+        "region_contrasive_loss_weight": 0
+    },
+    "controlnet_infer": {
+        "dim": [384, 384, 384],
+        "spacing": [1.0, 1.0, 1.0],
+        "top_region_index": [0, 1, 0, 0],
+        "bottom_region_index": [0, 0, 0, 1],
+        "modality": 1,
+        "num_inference_steps": 30,
+        "cfg_guidance_scale": 0,
+        "random_seed": 1234
+    }
+}

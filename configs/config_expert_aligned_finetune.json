@@ -1,0 +1,25 @@
+{
+    "_comment": "Fine-tune: 20 epochs from existing checkpoint, lr=5e-5 sustained (warmup + plateau, not cosine to 0). Used with the trainer's PolynomialLR by setting power=0 effectively via overriding sched in code, OR by relying on the polynomial power 2 being applied to a 20-epoch run (still 75% effective lr at midpoint).",
+    "controlnet_train": {
+        "batch_size": 12,
+        "cache_rate": 0,
+        "fold": 0,
+        "lr": 5e-5,
+        "n_epochs": 20,
+        "weighted_loss_label": [],
+        "weighted_loss": 0,
+        "use_region_contrasive_loss": false,
+        "region_contrasive_loss_delta": 0,
+        "region_contrasive_loss_weight": 0
+    },
+    "controlnet_infer": {
+        "dim": [384, 384, 384],
+        "spacing": [1.0, 1.0, 1.0],
+        "top_region_index": [0, 1, 0, 0],
+        "bottom_region_index": [0, 0, 0, 1],
+        "modality": 1,
+        "num_inference_steps": 30,
+        "cfg_guidance_scale": 0,
+        "random_seed": 1234
+    }
+}

@@ -1,0 +1,25 @@
+{
+    "_comment": "AMOS22 Expert A: 300 epochs, lr=1e-4, no contrastive loss. Resumable from 100ep checkpoint.",
+    "controlnet_train": {
+        "batch_size": 12,
+        "cache_rate": 0,
+        "fold": 0,
+        "lr": 1e-4,
+        "n_epochs": 800,
+        "weighted_loss_label": [],
+        "weighted_loss": 0,
+        "use_region_contrasive_loss": false,
+        "region_contrasive_loss_delta": 0,
+        "region_contrasive_loss_weight": 0
+    },
+    "controlnet_infer": {
+        "dim": [256, 256, 256],
+        "spacing": [1.5, 1.5, 1.5],
+        "top_region_index": [0, 1, 0, 0],
+        "bottom_region_index": [0, 0, 0, 1],
+        "modality": 1,
+        "num_inference_steps": 30,
+        "cfg_guidance_scale": 0,
+        "random_seed": 1234
+    }
+}
